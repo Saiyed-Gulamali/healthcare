@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1 class="my-4">Edit Doctor</h1>
+    <div class="card">
+        <div class="card-body">
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.name.label(class="form-label") }}
+                    {{ form.name(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.specialization.label(class="form-label") }}
+                    {{ form.specialization(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.schedule.label(class="form-label") }}
+                    {{ form.schedule(class="form-control") }}
+                </div>
+                <button type="submit" class="btn btn-primary">{{ form.submit.label }}</button>
+                <a href="{{ url_for('doctors') }}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

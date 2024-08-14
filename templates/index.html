@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="display-4">Welcome to the Healthcare Management System</h1>
+        <p class="lead">Efficiently manage patient records, doctor schedules, and appointments.</p>
+        <hr class="my-4">
+        <p>Get started by navigating to one of the sections below:</p>
+        <div class="button-group">
+            <a class="btn btn-primary btn-lg" href="{{ url_for('patients') }}" role="button">
+                <i class="fas fa-user-injured"></i> Manage Patients
+            </a>
+            <a class="btn btn-secondary btn-lg" href="{{ url_for('doctors') }}" role="button">
+                <i class="fas fa-user-md"></i> Manage Doctors
+            </a>
+            <a class="btn btn-success btn-lg" href="{{ url_for('appointments') }}" role="button">
+                <i class="fas fa-calendar-check"></i> Manage Appointments
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

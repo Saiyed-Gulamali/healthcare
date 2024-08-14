@@ -1,0 +1,141 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+.navbar-dark .navbar-nav .nav-link i {
+    margin-right: 5px;
+}
+
+/* Active link style */
+.navbar-dark .navbar-nav .nav-item.active .nav-link,
+.navbar-dark .navbar-nav .nav-item:hover .nav-link {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff !important;
+}
+
+/* Hero section styles */
+.hero-section {
+    background-image: url('../images/healthcare.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 56px); /* Adjust based on your navbar height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.hero-content h1, .hero-content p, .hero-content h2 {
+    color: white;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    margin: 5px;
+}
+
+/* Ensure the container doesn't interfere with the full-page hero on the index page */
+body.home > .container {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Form styles for login and register pages */
+.hero-content .form-label {
+    color: #ffffff; /* Change label color to white */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Add text shadow for better readability */
+}
+
+.hero-content .form-control {
+    margin-bottom: 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding-top: 1rem;
+    }
+    .navbar-nav .nav-item {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 1rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
+
+/* Profile page styles */
+.card-header {
+    background-color: #007bff; /* Match navbar color */
+    color: white;
+}
+
+.card-body {
+    font-size: 1.1rem;
+}
+
+.card-body p {
+    margin: 10px 0;
+}
+
+.card-body .btn {
+    margin-top: 15px;
+}
